@@ -18,7 +18,7 @@
     --fontSemiBold: 'Inter-SemiBold';
     --fontBold: 'Inter-Bold';
 
-    --Green: hsl(75, 94%, 57%);
+    --PrincipalColor: hsl(29, 57%, 66%);
 
     --White: hsl(0, 0%, 100%);
     --Grey: hsl(0, 0%, 20%);
@@ -91,7 +91,7 @@ body {
 
 #location {
     font-family: var(--fontSemiBold);
-    color: var(--Green);
+    color: var(--PrincipalColor);
 }
 
 #about {
@@ -129,7 +129,11 @@ body {
 
 #profileLinks li:hover {
     color: var(--OffBlack);
-    background-color: var(--Green);
+    background-color: var(--PrincipalColor);
+}
+
+a {
+    text-decoration: none;
 }
 
 @keyframes expandAnimation {
