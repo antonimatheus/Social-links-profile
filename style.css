@@ -110,9 +110,13 @@ body {
 }
 
 #profileLinks ul {
+    display: flex;
+    flex-direction: column;
     list-style-type: none;
     height: 100%;
     width: 100%;
+    gap: 5px;
+    /*background-color: red;*/
 }
 
 #profileLinks li {
@@ -125,6 +129,7 @@ body {
     background-color: var(--Grey);
     cursor: pointer;
     transition: .4s;
+    
 }
 
 #profileLinks li:hover {
