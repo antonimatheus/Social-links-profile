@@ -129,7 +129,6 @@ body {
     background-color: var(--Grey);
     cursor: pointer;
     transition: .4s;
-    
 }
 
 #profileLinks li:hover {
