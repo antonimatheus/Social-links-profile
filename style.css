@@ -120,6 +120,9 @@ body {
 }
 
 #profileLinks li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     padding: 13px;
     margin: 10px;
@@ -129,6 +132,7 @@ body {
     background-color: var(--Grey);
     cursor: pointer;
     transition: .4s;
+    gap: 8px;
 }
 
 #profileLinks li:hover {
