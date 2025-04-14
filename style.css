@@ -119,6 +119,15 @@ body {
   /*background-color: red;*/
 }
 
+@keyframes blinkHoverColor {
+  0%, 100% {
+    background-color: var(--Grey);
+  }
+  50% {
+    background-color:hsl(0, 0%, 23%);
+  }
+}
+
 #profileLinks li {
   display: flex;
   justify-content: center;
@@ -133,12 +142,17 @@ body {
   cursor: pointer;
   transition: 0.4s;
   gap: 8px;
+
+  /* Aqui entra a animação suave de piscar */
+  animation: blinkHoverColor 5s infinite ease-in-out;
 }
 
 #profileLinks li:hover {
   color: var(--OffBlack);
   background-color: var(--PrincipalColor);
+  animation: none; /* para não interferir com o hover */
 }
+
 
 a {
   text-decoration: none;
