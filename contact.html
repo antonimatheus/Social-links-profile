@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="assets/images/profile-pic.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Contact links</title>
+  </head>
+  <body>
+    <div id="container">
+      <div id="profileLinks">
+        <ul>
+          <a href="https://wa.link/8c2fjv" target="_blank">
+            <li id="whatsapp">
+              <i class="fa-brands fa-whatsapp"></i> whatsapp
+            </li>
+          </a>
+          <a href="#" onclick="copyEmail()">
+            <li id="email">
+              <i class="fa-solid fa-envelope"></i>
+              <span id="email-text">e-mail</span>
+            </li>
+          </a>
+          <a href="https://www.linkedin.com/in/antonimatheus/" target="_blank">
+            <li id="linkedIN">
+              <i class="fa-brands fa-linkedin"></i> linkedIN
+            </li>
+          </a>
+          <a href="https://www.instagram.com/antonii.design/" target="_blank">
+            <li id="instagram">
+              <i class="fa-brands fa-instagram"></i> instagram
+            </li>
+          </a>
+        </ul>
+      </div>
+      <a href="index.html" target="_parent" id="return">
+        <li>
+          <i class="fa-solid fa-rotate-left"></i>
+        </li>
+      </a>
+    </div>
+    <script>
+      function copyEmail() {
+        const email = "antonimatheusofc@gmail.com";
+        const emailText = document.getElementById("email-text");
+
+        navigator.clipboard.writeText(email).then(() => {
+          emailText.textContent = "E-MAIL COPIADO!";
+
+          setTimeout(() => {
+            emailText.textContent = "email";
+          }, 3000);
+        });
+      }
+    </script>
+  </body>
+</html>

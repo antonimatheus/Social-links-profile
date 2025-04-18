@@ -47,11 +47,24 @@ body {
 #container {
   display: flex;
   flex-direction: column;
-  width: 350px;
+  width: 400px;
+  max-width: 100%;
   padding: 20px;
   border-radius: 20px;
   background-color: var(--DarkGrey);
   animation: expandAnimation 1s;
+  animation: pulsarSombra 5s infinite ease-in-out;
+}
+
+/* animação do box-shadow */
+@keyframes pulsarSombra {
+  0%,
+  100% {
+    box-shadow: 0 0 0px 0px rgba(255, 255, 255, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 0px 1px rgba(255, 255, 255, 0.2);
+  }
 }
 
 #profileContent {
@@ -114,17 +127,29 @@ body {
   flex-direction: column;
   list-style-type: none;
   height: 100%;
-  width: 100%;
-  gap: 5px;
+  width: 350px;
+  max-width: 100%;
+  gap: 20px;
   /*background-color: red;*/
 }
 
+#profileLinks ul a img {
+  width: 100%;
+  border-radius: 10px;
+  transition: 0.4s;
+}
+
+#profileLinks ul a img:hover {
+  transform: scale(1.05);
+}
+
 @keyframes blinkHoverColor {
-  0%, 100% {
+  0%,
+  100% {
     background-color: var(--Grey);
   }
   50% {
-    background-color:hsl(0, 0%, 23%);
+    background-color: hsl(0, 0%, 23%);
   }
 }
 
@@ -132,13 +157,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
   padding: 13px;
   margin: 10px;
+  font-size: 18px;
   font-family: var(--fontBold);
-  border-radius: 10px;
   color: var(--White);
   background-color: var(--Grey);
+  border-radius: 10px;
   cursor: pointer;
   transition: 0.4s;
   gap: 8px;
@@ -153,6 +178,40 @@ body {
   animation: none; /* para não interferir com o hover */
 }
 
+#profileLinks i {
+  font-size: 20px;
+}
+
+#whatsapp i {
+  color: #25d366;
+}
+
+#email i {
+  color: #ea4335;
+}
+
+#linkedIN i {
+  color: #0077b5;
+}
+
+#instagram i {
+  color: #e1306c;
+}
+
+#return {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  margin: 0 auto;
+  width: 30%;
+  border-radius: 50px;
+  color: var(--White);
+  list-style-type: none;
+}
+
+#return ul {
+}
 
 a {
   text-decoration: none;
