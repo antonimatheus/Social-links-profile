@@ -53,18 +53,6 @@ body {
   border-radius: 20px;
   background-color: var(--DarkGrey);
   animation: expandAnimation 1s;
-  animation: pulsarSombra 5s infinite ease-in-out;
-}
-
-/* animação do box-shadow */
-@keyframes pulsarSombra {
-  0%,
-  100% {
-    box-shadow: 0 0 0px 0px rgba(255, 255, 255, 0.1);
-  }
-  50% {
-    box-shadow: 0 0 0px 1px rgba(255, 255, 255, 0.2);
-  }
 }
 
 #profileContent {
